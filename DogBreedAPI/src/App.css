@@ -1,0 +1,217 @@
+.App {
+  text-align: center;
+  
+}
+
+body {
+  background-color: #292918;
+  
+}
+
+nav {
+  min-height: 100px;
+  background: #F9F758;
+  
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links {
+  width: 50%; 
+  justify-content: space-around;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+.nav-links:first-child {
+  color: white;
+}
+
+.dog-breeds {
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.dog-breed {
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+
+.dog-images {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  min-height: 300px; 
+  max-height: 500px;
+  min-width: 300px;
+  grid-gap: 2rem; 
+}
+
+.dog-image-container {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.dog-image-container img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.dog-image-container img:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+
+.fullscreen-image {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.5); 
+  transition: all 0.3s ease-out;
+}
+
+.not-fullscreen-image {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.0); 
+  transition: all 0.3s ease-out;
+}
+
+.fullscreen-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.search-options {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-height: 500px;
+  max-height: 500px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.search-options::-webkit-scrollbar {
+  width: 0;
+}
+
+
+
+.search-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1A1E1E; 
+  height: 70px; 
+  border-radius: 50px;
+  padding: 10px;
+}
+  .search-box:hover > .search-input {
+    width: 350px;
+    padding: 0px 20px;
+  }
+  .search-box:hover > .search-btn {
+    background: #F9F758;
+  }
+
+.search-btn {
+  float: right; 
+  background: white; 
+  height: 70px;
+  width: 70px;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-bottom: 20px;
+  transition: 0.4s; 
+}
+
+
+
+.search-input {
+  outline: none;
+  border: none;
+  background: none;
+  float: left;
+  padding: 0;
+  color: white; 
+  font-size: 20px; 
+  transition: 0.4s; 
+  line-height: 70px;
+  width: 0px;
+  font-weight: bold;
+}
+.search-input:focus {
+  width: 350px;
+  padding: 0 20px;
+}
+.search-input:focus + .search-btn {
+  background: #F9F758;
+}
+
+
+.dropdown-item {
+  background: #F9F758;
+  /* width: 400px; */
+  height: 50px;
+  border-radius: 70px;
+  padding-top: 20px;
+  margin-top: 20px;
+  transition: all 0.3s ease-out;
+  border: 1px solid #F9F758;
+  
+}
+
+.dropdown-item a {
+  color: black; 
+  text-decoration: none;
+  font-weight: bold; 
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.dropdown-item:hover  {
+  border: 6px solid white;   
+}
+
+.dropdown-item:hover a {
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+
+.unselect-search-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  background: white;
+  opacity: 0.1;
+}
