@@ -1,0 +1,9 @@
+.temp {
+    background: yellow;
+    
+}
+
+.editorContainer {
+    height: 100vh;
+    box-sizing: border-box;
+}
